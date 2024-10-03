@@ -1,10 +1,9 @@
 'use client';
-
+import React, { useState } from 'react';
+import { useRouter } from 'next/navigation';
+import axios from 'axios';
 import { Spinner } from '@/app/components';
 import { AlertDialog, Button, Flex } from '@radix-ui/themes';
-import axios from 'axios';
-import { useRouter } from 'next/navigation';
-import { useState } from 'react';
 
 const DeleteIssueButton = ({ issueId }: { issueId: number }) => {
   const router = useRouter();
