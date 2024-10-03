@@ -1,8 +1,9 @@
-import { Link } from '@/app/components';
 import React from 'react';
-import NavLinks from './NavLinks';
-import { PiBugThin } from 'react-icons/pi';
 import { Container, Flex } from '@radix-ui/themes';
+import { PiBugThin } from 'react-icons/pi';
+import NavLinks from './NavLinks';
+import { Link } from '@/app/components';
+import { AuthStatus } from './AuthStatus';
 
 const NavBar = () => {
   return (
@@ -15,6 +16,7 @@ const NavBar = () => {
             </Link>
             <NavLinks />
           </Flex>
+          <AuthStatus />
         </Flex>
       </Container>
     </nav>
