@@ -1,7 +1,7 @@
-import Link from 'next/link';
+import { Link } from '@/app/components';
 import React from 'react';
 import NavLinks from './NavLinks';
-import { PiBugThin } from "react-icons/pi";
+import { PiBugThin } from 'react-icons/pi';
 import { Container, Flex } from '@radix-ui/themes';
 
 const NavBar = () => {

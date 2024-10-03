@@ -1,7 +1,7 @@
 import { IoArrowUp } from 'react-icons/io5';
 import { Table } from '@radix-ui/themes';
-import Link from 'next/link';
-import React from 'react';
+import { Link } from '@/app/components';
+import React, { FC } from 'react';
 import NextLink from 'next/link';
 import { Issue, IssueStatus } from '@prisma/client';
 import { IssueStatusBadge } from '@/app/components/IssueStatusBadge';
@@ -12,12 +12,12 @@ export interface IssueQuery {
   page: string;
 }
 
-interface Props {
+type Props = {
   searchParams: IssueQuery;
   issues: Issue[];
-}
+};
 
-const IssueTable = ({ searchParams, issues }: Props) => {
+const IssueTable: FC<Props> = ({ searchParams, issues }) => {
   return (
     <Table.Root variant="surface">
       <Table.Header>
@@ -39,7 +39,6 @@ const IssueTable = ({ searchParams, issues }: Props) => {
               </NextLink>
               {column.value === searchParams.orderBy && (
                 <IoArrowUp className="inline" />
-                // <ArrowUpIcon  />
               )}
             </Table.ColumnHeaderCell>
           ))}

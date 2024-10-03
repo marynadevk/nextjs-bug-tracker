@@ -1,5 +1,6 @@
+import { Link } from '@/app/components';
 import { Button, Flex } from '@radix-ui/themes';
-import Link from 'next/link';
+
 import React from 'react';
 
 const IssueActions = () => {
