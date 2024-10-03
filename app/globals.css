@@ -17,3 +17,10 @@
 body {
   color: rgb(var(--foreground-rgb));
 }
+
+@layer utilities {
+  .nav-link {
+    @apply text-teal-950 hover:text-zinc-800 transition-colors;
+
+  }
+}

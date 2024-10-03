@@ -1,11 +1,13 @@
-import React from 'react'
+import React from 'react';
+import { Flex } from '@radix-ui/themes';
+import IssueActions from './IssueActions';
 
 const IssuesPage = () => {
   return (
-    <div>
-      
-    </div>
-  )
-}
+    <Flex direction="column" gap="3">
+      <IssueActions />
+    </Flex>
+  );
+};
 
-export default IssuesPage
+export default IssuesPage;

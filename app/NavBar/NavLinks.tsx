@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import Link from 'next/link';
 import classnames from 'classnames';
@@ -16,9 +16,9 @@ const NavLinks = () => {
       {links.map((link) => (
         <li key={link.href}>
           <Link
-            className={classnames({
+          className={classnames({
               'nav-link': true,
-              '!text-teal-900, bg-teal-100': link.href === currentPath,
+              'text-teal-700, bg-teal-100': link.href === currentPath,
             })}
             href={link.href}
           >
