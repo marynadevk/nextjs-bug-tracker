@@ -36,13 +36,13 @@ const IssueDetailPage: FC<Props> = async ({ params }) => {
   );
 };
 
-export async function generateMetadata({ params }: Props) {
+export const generateMetadata = async ({ params }: Props) => {
   const issue = await fetchUser(parseInt(params.id));
 
   return {
     title: issue?.title,
     description: 'Details of issue ' + issue?.id,
   };
-}
+};
 
 export default IssueDetailPage;

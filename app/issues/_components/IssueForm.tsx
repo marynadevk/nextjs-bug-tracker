@@ -32,22 +32,16 @@ const IssueForm = ({ issue }: { issue?: Issue }) => {
 
   const onSubmit = handleSubmit(async (data) => {
     try {
-      console.log('!', data);
-
       setSubmitting(true);
       if (issue) {
         await axios.patch('/api/issues/' + issue.id, data);
       } else {
-        console.log('!!!', data);
-        const r = await axios.post('/api/issues', data);
-        console.log(r);
+        await axios.post('/api/issues', data);
       }
-      console.log('next step', isSubmitting);
       router.push('/issues/list');
       router.refresh();
       setSubmitting(false);
     } catch (error) {
-      console.log('!!!!!!', data);
       setSubmitting(false);
       setError(ERROR_MSG);
     } finally {

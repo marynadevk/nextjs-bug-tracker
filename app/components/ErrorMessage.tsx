@@ -1,7 +1,7 @@
 import { Text } from '@radix-ui/themes';
-import React, { PropsWithChildren } from 'react';
+import React, { FC, PropsWithChildren } from 'react';
 
-export const ErrorMessage = ({ children }: PropsWithChildren) => {
+export const ErrorMessage: FC<PropsWithChildren> = ({ children }) => {
   if (!children) return null;
 
   return (

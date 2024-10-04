@@ -10,7 +10,6 @@ export async function POST(request: NextRequest) {
   if (!session) return NextResponse.json({}, { status: 401 });
 
   const body = await request.json();
-  console.log(body);
   const validation = issueSchema.safeParse(body);
   if (!validation.success)
     return NextResponse.json(validation.error.format(), {

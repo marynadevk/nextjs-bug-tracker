@@ -1,3 +1,5 @@
+'use client';
+
 import { useSession } from 'next-auth/react';
 import { Link, Skeleton } from '../components';
 import { Avatar, Box, DropdownMenu, Text } from '@radix-ui/themes';

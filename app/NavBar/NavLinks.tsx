@@ -1,6 +1,6 @@
 'use client';
 
-import Link from '../components/Link';
+import { Link } from '../components';
 import classnames from 'classnames';
 import { usePathname } from 'next/navigation';
 
@@ -16,7 +16,7 @@ const NavLinks = () => {
       {links.map((link) => (
         <li key={link.href}>
           <Link
-          className={classnames({
+            className={classnames({
               'nav-link': true,
               'text-teal-700, bg-teal-100': link.href === currentPath,
             })}

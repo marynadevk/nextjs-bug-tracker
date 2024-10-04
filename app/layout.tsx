@@ -11,7 +11,7 @@ import QueryClientProvider from './QueryClientProvider';
 const inter = Overpass({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Issue Tracker',
+  title: 'BugTracker',
 };
 
 export default function RootLayout({

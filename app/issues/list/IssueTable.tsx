@@ -4,7 +4,7 @@ import { Link } from '@/app/components';
 import React, { FC } from 'react';
 import NextLink from 'next/link';
 import { Issue, IssueStatus } from '@prisma/client';
-import { IssueStatusBadge } from '@/app/components/IssueStatusBadge';
+import { IssueStatusBadge } from '@/app/components';
 
 export interface IssueQuery {
   status: IssueStatus;
